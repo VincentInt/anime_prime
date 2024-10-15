@@ -1,0 +1,9 @@
+.blue_link,
+.blue_link_active {
+  text-decoration: none;
+  padding: 5px 50px;
+  border-radius: 25px;
+}
+.blue_link_active {
+  background-color: rgba(0, 185, 231, 1);
+}

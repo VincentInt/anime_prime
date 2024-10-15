@@ -1,0 +1,51 @@
+.container_anime_category {
+  margin-top: 25px;
+  .container_title {
+    display: flex;
+    justify-content: space-between;
+    .text_title {
+      font-size: 28px;
+      color: rgba(90, 103, 119, 1);
+    }
+    .btn_roll_up {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      border: none;
+      .arrow_up_img,
+      .arrow_down_img {
+        width: 25px;
+        filter: contrast(0%) brightness(1000%);
+        transition: all 0.2s ease;
+      }
+      .arrow_up_img {
+        rotate: -90deg;
+      }
+      .arrow_down_img {
+        rotate: 90deg;
+      }
+    }
+  }
+
+  .container_card_anime_category {
+    display: flex;
+    margin-top: 40px;
+  }
+  .container_btn_more_anime_card {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    .btn_more_anime_card {
+      padding: 5px 10px;
+      border: none;
+      border-bottom: 2px solid rgba(90, 103, 119, 0.591);
+      transition: all 0.5s ease;
+      &:hover {
+        padding: 5px 25px;
+      }
+      h3 {
+        color: rgba(90, 103, 119, 1);
+      }
+    }
+  }
+}

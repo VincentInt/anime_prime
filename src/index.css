@@ -1,0 +1,24 @@
+@font-face {
+  font-family: "Amazon Ember";
+  src: url("./assets/fonts/Amazon Ember.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+* {
+  font-family: "Amazon Ember";
+  margin: 0;
+  color: white;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  font-family: "Amazon Ember";
+  background-color: transparent;
+}
+body {
+  margin: 0px 220px;
+  margin-bottom: 80px;
+  background-color: rgba(13, 24, 33, 1);
+}

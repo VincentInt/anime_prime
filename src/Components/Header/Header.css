@@ -1,0 +1,17 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 0px;
+  .logo_prime {
+    color: rgba(0, 185, 231, 1);
+  }
+  .icon_exit{
+    width: 25px;
+    
+  }
+  .container_header_btn_reg {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+  }
+}

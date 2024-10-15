@@ -1,0 +1,9 @@
+.container_banner_page {
+  display: flex;
+  align-items: center;
+  min-width: 100%;
+  min-height: 100%;
+  transition: all 0.5s ease-in-out;
+  gap: 45px;
+ 
+}
