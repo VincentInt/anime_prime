@@ -1,4 +1,4 @@
-import moveBanner from "./moveBanner";
+import moveBanner from "./moveBanner.js";
 
 const intervalMoveBanner = (bannerPages, bannerStatePage, dispatch) => {
   const interval = setInterval(() => {

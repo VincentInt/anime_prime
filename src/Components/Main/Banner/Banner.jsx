@@ -1,7 +1,7 @@
 import "./Banner.css";
 import { useEffect } from "react";
 import BannerPages from "./BannerPages/BannerPages";
-import intervalMoveBanner from "./module/IntervalMoveBanner";
+import intervalMoveBanner from "./module/intervalMoveBanner.js";
 import moveBanner from "./module/moveBanner";
 import filterPreviewBanner from "./module/filterPreviewBanner";
 import leftIconImg from "../../../assets/Img/Icon/icons8-arrow-100-l.png";

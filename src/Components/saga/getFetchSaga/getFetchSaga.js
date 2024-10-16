@@ -10,7 +10,7 @@ function* getFetchWatcher(action) {
       .then((res) => res)
       .catch((err) => console.error(err))
   );
-  if (data?.status == 429) {
+  if (!data) {
     yield delay(2500);
     yield getFetchWatcher(action);
   } else {

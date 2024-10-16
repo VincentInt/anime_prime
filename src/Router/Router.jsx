@@ -8,10 +8,10 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path="/anime_prime.io" element={<Layout />}>
           <Route index element={<MainPage />} />
-          <Route path="/:type/" element={<MainPage />} />
-          <Route path="/animeItem/:id" element={<AnimeItemPage />} />
+          <Route path=":type/" element={<MainPage />} />
+          <Route path="animeItem/:id" element={<AnimeItemPage />} />
         </Route>
         <Route path="/sing" element={<SingPage/>}/>
       </Routes>

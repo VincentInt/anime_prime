@@ -13,7 +13,7 @@ const AnimeCards = ({ stateMorePage, animeContent }) => {
           .map((item, index) => {
             return (
               <Link
-                to={`/animeItem/${item.mal_id}`}
+                to={`/anime_prime.io/animeItem/${item.mal_id}`}
                 state={params.type}
                 style={{ backgroundImage: `url(${item.images.jpg.image_url})` }}
                 className="anime_card"

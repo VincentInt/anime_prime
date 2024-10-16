@@ -16,7 +16,7 @@ const Header = () => {
   };
   return (
     <header>
-      <Link to={locate.state ? `/${locate.state}` : "/"}>
+      <Link to={locate.state ? `/anime_prime.io/${locate.state}` : "/anime_prime.io"}>
         <h2>
           Anime <span className="logo_prime">Prime</span>
         </h2>
@@ -37,7 +37,7 @@ const Header = () => {
             <WhiteBtn>
               <h3>Log In</h3>
             </WhiteBtn>
-            <Link to={"/sing"}>
+            <Link to={"/anime_prime.io/sing"}>
               <BlueBtn>
                 <h3>Sing</h3>
               </BlueBtn>
