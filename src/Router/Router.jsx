@@ -6,7 +6,7 @@ import SingPage from "../Page/SingPage/SingPage";
 
 const Router = () => {
   return (
-    <BrowserRouter basename="/anime_prime.io/">
+    <BrowserRouter basename="/anime_prime.io">
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
