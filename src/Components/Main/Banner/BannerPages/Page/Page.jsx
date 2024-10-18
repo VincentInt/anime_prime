@@ -69,7 +69,7 @@ const Page = ({ item, index }) => {
                   : item.synopsis}
               </p>
             </div>
-            <Link to={`/anime_prime.io/animeItem/${item.mal_id}`} state={params.type}>
+            <Link to={`/animeItem/${item.mal_id}`} state={params.type}>
               <WhiteBtn>
                 <h2>View</h2>
               </WhiteBtn>
