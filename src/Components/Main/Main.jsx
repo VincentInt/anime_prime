@@ -10,7 +10,7 @@ const Main = () => {
   
   useEffect(() => {
     if (!params.type) {
-      navigate("/anime_prime.io/movie");
+      navigate("/movie");
     }
   }, [params]);
   return (

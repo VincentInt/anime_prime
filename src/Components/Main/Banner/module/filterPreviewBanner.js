@@ -16,6 +16,6 @@ const filterPreviewBanner = (bannerData, dispatch) => {
       return false;
     }
   }
-  setTimeout(() => dispatch(filteredArray), 100);
+  setTimeout(() => dispatch(filteredArray), 500);
 };
 export default filterPreviewBanner;
