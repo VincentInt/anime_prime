@@ -6,14 +6,14 @@ import SingPage from "../Page/SingPage/SingPage";
 
 const Router = () => {
   return (
-    <BrowserRouter basename="/anime_prime.io/">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
-        <Route element={<Layout />}>
+        <Route path="/" element={<Layout />}>
           <Route index element={<MainPage />} />
           <Route path=":type/" element={<MainPage />} />
           <Route path="animeItem/:id" element={<AnimeItemPage />} />
         </Route>
-        <Route path="sing" element={<SingPage />} />
+        <Route path="sing" element={<SingPage/>}/>
       </Routes>
     </BrowserRouter>
   );
