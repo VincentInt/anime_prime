@@ -1,5 +1,11 @@
 const defaultState = {
-  usersData: [],
+  usersData: [
+    {
+      userName: "winchestar",
+      login: "winchestar",
+      password: "1234",
+    },
+  ],
   userLogin: { statusLogin: false, userName: "", login: "", password: "" },
 };
 
@@ -13,7 +19,7 @@ export const userReducer = (state = defaultState, action) => {
     case ADD_USER:
       return { ...state, usersData: [...state.usersData, action.payload] };
     case LOGIN_USER:
-      return { ...state, userLogin: { ...action.payload } };
+      return { ...state, userLogin: { ...action.payload, statusLogin: true } };
     case LEAVE_USER:
       return { ...state, userLogin: defaultState.userLogin };
     default:

@@ -1,0 +1,27 @@
+.container_sing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      h2 {
+        text-align: center;
+      }
+      padding: 45px 50px;
+      border-radius: 12px;
+      background-color: rgba(37, 46, 57, 1);
+      .login_error{
+        color: red;
+      }
+      .container_input {
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 15px;
+      }
+    }
+  }
+  

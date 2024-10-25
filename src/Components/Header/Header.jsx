@@ -24,7 +24,7 @@ const Header = () => {
       <div className="container_header_btn_reg">
         {userLogin.statusLogin ? (
           <>
-            <h2>{userLogin.userName}</h2>
+            <h3>{userLogin.userName}</h3>
             <WhiteBtn
               change={() => handlerClickLeaveLogin()}
               style={{ padding: "5px 8px" }}
@@ -34,9 +34,11 @@ const Header = () => {
           </>
         ) : (
           <>
-            <WhiteBtn>
-              <h3>Log In</h3>
-            </WhiteBtn>
+            <Link to={"/login"}>
+              <WhiteBtn>
+                <h3>Log In</h3>
+              </WhiteBtn>
+            </Link>
             <Link to={"/sing"}>
               <BlueBtn>
                 <h3>Sing</h3>

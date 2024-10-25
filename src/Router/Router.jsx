@@ -3,6 +3,7 @@ import MainPage from "../Page/MainPage/MainPage";
 import Layout from "./Layout/Layout";
 import AnimeItemPage from "../Page/AnimeItemPage/AnimeItemPage";
 import SingPage from "../Page/SingPage/SingPage";
+import LoginPage from "../Page/LoginPage/LoginPage"
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
           <Route path="animeItem/:id" element={<AnimeItemPage />} />
         </Route>
         <Route path="sing" element={<SingPage/>}/>
+        <Route path="login" element={<LoginPage/>}/>
       </Routes>
     </BrowserRouter>
   );
