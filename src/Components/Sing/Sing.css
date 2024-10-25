@@ -13,6 +13,9 @@
     padding: 45px 50px;
     border-radius: 12px;
     background-color: rgba(37, 46, 57, 1);
+    .sing_error{
+      color: red;
+    }
     .container_input {
       display: flex;
       flex-direction: column;

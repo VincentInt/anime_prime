@@ -12,8 +12,9 @@ import {
 const Sing = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  const usersData = useSelector((state) => state.user.usersData);
+  const { usersData } = useSelector((state) => state.user);
 
+  const [usersSingError, setUsersSingError] = useState(false);
   const [inputs, setInputs] = useState({
     userName: "",
     login: "",
@@ -31,28 +32,25 @@ const Sing = () => {
   const handlerClickSend = (event) => {
     event.preventDefault();
 
+    const { login, userName, password } = inputs;
+
     if (inputs.password === inputs.repeatPassword) {
-      let statusSearch = false;
-      for (const item of usersData) {
-        if (item.login === inputs.login || item.userName === inputs.userName) {
-          statusSearch = true;
-          break;
-        }
-      }
-      if (!statusSearch) {
+      const searchRepeat = usersData.filter((item) => {
+        return item.login === login && item.userName === userName;
+      });
+      if (!searchRepeat.length) {
         dispatch(
           addUserAction({
-            userName: inputs.userName,
-            login: inputs.login,
-            password: inputs.password,
+            userName: userName,
+            login: login,
+            password: password,
           })
         );
         dispatch(
           loginUserAction({
-            statusLogin: true,
-            userName: inputs.userName,
-            login: inputs.login,
-            password: inputs.password,
+            userName: userName,
+            login: login,
+            password: password,
           })
         );
         setInputs({
@@ -62,6 +60,8 @@ const Sing = () => {
           repeatPassword: "",
         });
         navigate("/");
+      } else {
+        setUsersSingError(true);
       }
     }
   };
@@ -70,6 +70,13 @@ const Sing = () => {
       <form>
         <h2>Sing</h2>
         <div className="container_input">
+          {usersSingError ? (
+            <h5 className="sing_error">
+              Аккаунт с таким логином уже существует
+            </h5>
+          ) : (
+            ""
+          )}
           <CustomInput
             value={inputs.userName}
             onChange={(event) => onChangeFunc(event, "userName")}
